@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenStream - Películas, Series y Anime</title>
+
+    <!-- Google Fonts para tipografa moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlace a tu CSS -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Men<span>Stream</span></h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#inicio" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="#peliculas"><i class="fa-solid fa-film"></i> Películas</a>
+            <a href="#series"><i class="fa-solid fa-tv"></i> Series</a>
+            <a href="#anime"><i class="fa-solid fa-wand-magic-sparkles"></i> Anime</a>
+            <a href="#planes"><i class="fa-solid fa-gem"></i> Planes</a>
+            <a href="#soporte"><i class="fa-solid fa-circle-question"></i> Soporte</a>
+        </nav>
+
+        <!-- Menú de Usuario (Esquina Superior Derecha) -->
+        <div class="user-menu">
+            <button class="user-btn">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="user-info">
+                    <p class="user-name">Usuario MenStream</p>
+                    <span class="badge-free">Plan Gratuito</span>
+                </div>
+                <hr>
+                <a href="#perfil"><i class="fa-solid fa-user-gear"></i> Mi Perfil</a>
+                <a href="#favoritos"><i class="fa-solid fa-heart"></i> Mi Lista</a>
+                <a href="#configuracion"><i class="fa-solid fa-sliders"></i> Ajustes</a>
+                <a href="#suscripcion"><i class="fa-solid fa-credit-card"></i> Suscripción</a>
+                <hr>
+                <a href="#logout" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HÉROE / BANNER PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="tag">Exclusivo en MenStream</span>
+            <h1>Entretenimiento Sin Límites</h1>
+            <p>Miles de películas, series originales y el mejor anime en calidad 4K HDR. Seleccionados para exigentes.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="boton()"><i class="fa-solid fa-play"></i> Conocer más</button>
+                <a href="#planes" class="btn-secondary"><i class="fa-solid fa-crown"></i> Ver Planes Premium</a>
+            </div>
+            <h2 id="palabra"></h2>
+        </div>
+    </section>
+
+    <main class="main-container">
+
+        <!-- SECCIÓN DE PELÍCULAS Y SUS GÉNEROS -->
+        <section id="peliculas" class="catalog-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-film"></i> Catálogo de Películas</h2>
+                <p>Explora por tus géneros favoritos</p>
+            </div>
+            <div class="genres-grid">
+                <article class="genre-card">
+                    <i class="fa-solid fa-explosion"></i>
+                    <h3>Acción</h3>
+                    <p>Adrenalina y ritmo frenético</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-ghost"></i>
+                    <h3>Terror</h3>
+                    <p>Suspenso y escalofríos</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-user-secret"></i>
+                    <h3>Ciencia Ficción</h3>
+                    <p>Futuro, espacio y tecnología</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-masks-theater"></i>
+                    <h3>Drama</h3>
+                    <p>Historias profundas e intensas</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERIES Y SUS GÉNEROS -->
+        <section id="series" class="catalog-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-tv"></i> Series Exclusivas</h2>
+                <p>Maratonea las mejores temporadas</p>
+            </div>
+            <div class="genres-grid">
+                <article class="genre-card">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>Misterio / Thriller</h3>
+                    <p>Intriga que te mantendrá atrapado</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-face-laugh-beam"></i>
+                    <h3>Comedia</h3>
+                    <p>Risas garantizadas en cada episodio</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Fantasía Épica</h3>
+                    <p>Mundos mágicos y grandes aventuras</p>
+                </article>
+                <article class="genre-card">
+                    <i class="fa-solid fa-landmark"></i>
+                    <h3>Documentales</h3>
+                    <p>Historias reales fascinantes</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE ANIME Y SUS GÉNEROS -->
+        <section id="anime" class="catalog-section anime-theme">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-wand-magic-sparkles"></i> MUNDO ANIME</h2>
+                <p>Los mejores estrenos simultáneos con Japón</p>
+            </div>
+            <div class="genres-grid">
+                <article class="genre-card anime-card">
+                    <i class="fa-solid fa-hand-fist"></i>
+                    <h3>Shonen</h3>
+                    <p>Combates épicos y superación</p>
+                </article>
+                <article class="genre-card anime-card">
+                    <i class="fa-solid fa-door-open"></i>
+                    <h3>Isekai</h3>
+                    <p>Reencarnación en otros mundos</p>
+                </article>
+                <article class="genre-card anime-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Shojo / Romance</h3>
+                    <p>Emoción y relaciones profundas</p>
+                </article>
+                <article class="genre-card anime-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Seinen</h3>
+                    <p>Historias maduras y complejas</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PLANES Y SUSCRIPCIONES -->
+        <section id="planes" class="pricing-section">
+            <div class="section-header center">
+                <h2>Elije el Plan Ideal para Ti</h2>
+                <p>Sin compromisos. Cancela o cambia cuando quieras.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan Gratis -->
+                <div class="price-card">
+                    <div class="card-header">
+                        <h3>Plan Gratis</h3>
+                        <div class="price">S/ 0 <span>/ mes</span></div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Calidad Estándar (720p)</li>
+                        <li><i class="fa-solid fa-check"></i> Catálogo básico</li>
+                        <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i> Contiene Anuncios</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Dispositivo a la vez</li>
+                    </ul>
+                    <button class="btn-plan current">Plan Actual</button>
+                </div>
+
+                <!-- Plan Premium Max (30 al mes) -->
+                <div class="price-card featured">
+                    <div class="popular-badge">MÁS POPULAR</div>
+                    <div class="card-header">
+                        <h3>Premium Max</h3>
+                        <div class="price">S/ 30 <span>/ mes</span></div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Calidad Ultra HD 4K + HDR</li>
+                        <li><i class="fa-solid fa-check"></i> Sin anuncios publicitarios</li>
+                        <li><i class="fa-solid fa-check"></i> Audio Dolby Atmos</li>
+                        <li><i class="fa-solid fa-check"></i> 3 Dispositivos simultáneos</li>
+                        <li><i class="fa-solid fa-check"></i> Descargas offline</li>
+                    </ul>
+                    <button class="btn-plan primary">Obtener Premium Max</button>
+                </div>
+
+                <!-- Plan Familiar Anual -->
+                <div class="price-card">
+                    <div class="card-header">
+                        <h3>Plan Familiar Anual</h3>
+                        <div class="price">S/ 280 <span>/ año</span></div>
+                        <span class="discount">Ahorras más de 25% al año</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Calidad Ultra HD 4K</li>
+                        <li><i class="fa-solid fa-check"></i> Sin anuncios</li>
+                        <li><i class="fa-solid fa-check"></i> Hasta 6 perfiles individuales</li>
+                        <li><i class="fa-solid fa-check"></i> Control parental para niños</li>
+                        <li><i class="fa-solid fa-check"></i> Suscripción por 1 año completo</li>
+                    </ul>
+                    <button class="btn-plan outline">Contratar Plan Anual</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE AYUDA Y SOPORTE -->
+        <section id="soporte" class="support-section">
+            <div class="section-header center">
+                <h2><i class="fa-solid fa-headset"></i> Centro de Ayuda y Soporte</h2>
+                <p>¿Tienes dudas o problemas? Estamos para ayudarte 24/7</p>
+            </div>
+            <div class="support-grid">
+                <div class="support-card">
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>Chat en Vivo</h3>
+                    <p>Atención personalizada al instante con nuestro equipo de soporte.</p>
+                    <a href="#" class="support-link">Iniciar Chat <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h3>Preguntas Frecuentes</h3>
+                    <p>Resuelve tus dudas sobre pagos, configuración y dispositivos compatibles.</p>
+                    <a href="#" class="support-link">Ver Preguntas <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Soporte por Correo</h3>
+                    <p>Escríbenos a <strong>soporte@menstream.com</strong> y responderemos pronto.</p>
+                    <a href="#" class="support-link">Enviar Correo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="pie">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Men<span>Stream</span></h3>
+                <p>La plataforma definitiva para amantes del cine, las series y el anime de alta calidad.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <a href="#peliculas">Películas</a>
+                <a href="#series">Series</a>
+                <a href="#anime">Anime</a>
+                <a href="#planes">Planes</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Privacidad</h4>
+                <a href="#">Términos del Servicio</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MenStream. Todos los derechos reservados. Creado para la excelencia en entretenimiento.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace a tu JavaScript -->
+    <script src="java.js"></script>
+</body>
+</html>
